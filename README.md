@@ -2,7 +2,7 @@
 
 ## Description
 
-This application generates a simple ReadMe with node and inquirer
+This application generates a simple ReadMe with node and inquirer. Here is a demonstration [video](https://drive.google.com/file/d/19EmFbOFM9db5JndSPo6la40cY8SnotcX/view)
 
 ## Table of Contents
 
