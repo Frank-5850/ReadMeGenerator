@@ -1,7 +1,7 @@
 // function to generate markdown for README
 function generateReadMe(userData) {
     return `
-    <h1 align="center">${userData.title} 👋</h1>
+    <h1 align="center">${userData.title}</h1>
     ## Description
     ${userData.description}
     ## Table of Contents

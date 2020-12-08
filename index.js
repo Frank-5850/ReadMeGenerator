@@ -1,9 +1,13 @@
 // declared Variables and dependancies
 const inquirer = require('inquirer');
+const fs = require('fs');
+const generate = require('./util/generateReadMe');
+const util = require ('util');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user to build readme
-const questions = inquirer
-    .prompt([
+const questions = () =>
+inquirer.prompt([
         {
             type: "input",
             name: "title",
@@ -63,7 +67,9 @@ const questions = inquirer
             name: "email",
             message: "Please enter your email: "
         }
-    ])
-    .then((res) =>
-    console.log(res)
-    );
+    ]);
+
+questions()
+    .then((userData) => writeFileAsync('README.md', generate(userData)))
+    .then(()=> console.log('success!'))
+    .catch((err) => console.log(err))
