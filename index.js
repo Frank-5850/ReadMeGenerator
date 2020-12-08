@@ -70,6 +70,6 @@ inquirer.prompt([
     ]);
 
 questions()
-    .then((userData) => writeFileAsync('README.md', generate(userData)))
+    .then((userData) => writeFileAsync('./sample/README.md', generate(userData)))
     .then(()=> console.log('success!'))
     .catch((err) => console.log(err))
