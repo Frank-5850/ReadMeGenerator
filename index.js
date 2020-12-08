@@ -67,4 +67,3 @@ const questions = inquirer
     .then((res) =>
     console.log(res)
     );
-
